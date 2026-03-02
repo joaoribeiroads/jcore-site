@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     nav.addEventListener("click", (event) => {
-      const target = event.target;
-      if (target instanceof HTMLAnchorElement) {
+      if (event.target instanceof HTMLAnchorElement) {
         nav.classList.remove("nav--open");
       }
     });
@@ -24,37 +23,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const feedback = document.getElementById("form-feedback");
 
   if (form && feedback) {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-      const nomeInput = document.getElementById("nome");
-      const emailInput = document.getElementById("email");
-      const mensagemInput = document.getElementById("mensagem");
-
-      const nome = nomeInput ? nomeInput.value.trim() : "";
-      const email = emailInput ? emailInput.value.trim() : "";
-      const mensagem = mensagemInput ? mensagemInput.value.trim() : "";
+      const nome = document.getElementById("nome").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
 
       const whatsappNumber = "5548991077261";
 
-      const texto = [
-        "Olá! Quero um orçamento de site.",
-        nome && `Nome: ${nome}`,
-        email && `E-mail: ${email}`,
-        mensagem && `Mensagem: ${mensagem}`,
-      ]
-        .filter(Boolean)
-        .join("\n");
+      const texto = `Olá! Quero um orçamento de site.%0A%0A*Nome:* ${nome}%0A*E-mail:* ${email}%0A*Mensagem:* ${mensagem}`;
 
-      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-        texto
-      )}`;
+      const url = `https://wa.me/${whatsappNumber}?text=${texto}`;
 
       window.open(url, "_blank");
 
       form.reset();
-      feedback.textContent =
-        "Pronto! Abrimos uma conversa no seu WhatsApp. Se não abriu, verifique se o navegador bloqueou a nova aba.";
+      feedback.textContent = "Pronto! Abrimos uma conversa no seu WhatsApp.";
       feedback.hidden = false;
 
       setTimeout(() => {

@@ -25,6 +25,7 @@
                 <a href="#inicio">Início</a>
                 <a href="#sobre">Sobre mim</a>
                 <a href="#servicos">Planos de sites</a>
+                <a href="#portfolio">Portfólio</a>
                 <a href="#depoimentos">Depoimentos</a>
                 <a href="#contato" class="nav__cta">Contato</a>
             </nav>
@@ -45,7 +46,7 @@
                         clientes todos os dias, do jeito que o seu negócio precisa.
                     </p>
                     <div class="hero__actions">
-                        <a href="#contato" class="btn btn--primary">Quero um orçamento</a>
+                        <a href="#contato" class="btn-cta-principal">Quero um orçamento</a>
                         <a href="#servicos" class="btn btn--ghost">Ver planos de sites</a>
                     </div>
                     <div class="hero__badges">
@@ -110,28 +111,86 @@
                 <div class="grid grid--3">
                     <article class="card">
                         <h3>Site institucional profissional</h3>
-                        <p>
-                            Site completo para apresentar sua empresa, serviços, diferenciais e
-                            formas de contato, com visual moderno e pronto para aparecer bem no Google.
-                        </p>
+                        <ul class="card-features-list">
+                            <li>✅ Site completo e moderno</li>
+                            <li>✅ Focado em autoridade</li>
+                            <li>✅ Pronto para o Google</li>
+                            <li>✅ Painel administrativo</li>
+                        </ul>
+                        <a href="#contato" class="btn-card">Escolher este</a>
                     </article>
-                    <article class="card">
+
+                    <article class="card card--featured">
                         <h3>Landing pages que convertem</h3>
-                        <p>
-                            Páginas únicas focadas em campanhas específicas, lançamentos e captação
-                            de contatos, feitas para melhorar a taxa de conversão dos seus anúncios.
-                        </p>
+                        <ul class="card-features-list">
+                            <li>🚀 Design focado em vendas</li>
+                            <li>🚀 Integração com WhatsApp</li>
+                            <li>🚀 Pixel e Google Ads</li>
+                            <li>🚀 Carregamento ultra-rápido</li>
+                        </ul>
+                        <a href="#contato" class="btn-card btn-card--featured">O mais pedido</a>
                     </article>
+
                     <article class="card">
                         <h3>Loja virtual e catálogos</h3>
-                        <p>
-                            Estrutura para você expor produtos ou serviços, com organização por
-                            categorias e espaço para informações, imagens e botões de contato.
-                        </p>
+                        <ul class="card-features-list">
+                            <li>🛒 Cadastro de produtos</li>
+                            <li>🛒 Categorias organizadas</li>
+                            <li>🛒 Pedidos via WhatsApp</li>
+                            <li>🛒 Galeria de fotos e preços</li>
+                        </ul>
+                        <a href="#contato" class="btn-card">Escolher este</a>
                     </article>
                 </div>
             </div>
         </section>
+
+        <section class="section portfolio" id="portfolio">
+            <div class="container">
+                <header class="section__header">
+                    <h2>Meu Portfólio</h2>
+                    <p>Alguns projetos recentes que desenvolvi.</p>
+                </header>
+
+                <div class="portfolio-grid">
+                    <article class="portfolio-item">
+                        <img src="image.png" alt="Sabor do Prédio - Pedido Rápido" />
+                        <div class="portfolio-content">
+                            <h3>Sabor do Prédio - Pedido Rápido</h3>
+                            <p>Site ultra-rápido que não precisa recarregar a página, facilitando o pedido do cliente e
+                                aumentando as vendas.</p>
+                            <a href="https://foodsiteee.netlify.app/" target="_blank" rel="noopener noreferrer">Ver
+                                projeto</a>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <img src="image (1).png" alt="Projeto 2 - Nome do projeto" />
+                        <div class="portfolio-content">
+                            <h3>LP para Dra. Geovana</h3>
+                            <p>Landing page desenvolvida para a Psicóloga Geovana, unindo design acolhedor e copywriting
+                                focado em conversão. O projeto prioriza a facilidade de agendamento e a construção de
+                                autoridade através de uma interface limpa e responsiva.</p>
+                            <a href="https://psicologage.netlify.app/" target="_blank" rel="noopener noreferrer">Ver
+                                projeto</a>
+                        </div>
+                    </article>
+
+                    <article class="portfolio-item">
+                        <img src="image (2).png" alt="e-pulse" />
+                        <div class="portfolio-content">
+                            <h3>e-pulse</h3>
+                            <p>Criação de um catálogo otimizado para conversão e com integração
+                                direta para pedidos via WhatsApp. Desenvolvido para oferecer carregamento rápido e
+                                navegação fluida em qualquer dispositivo.</p>
+                            <a href="https://e-pulse.netlify.app/" target="_blank" rel="noopener noreferrer">Ver
+                                projeto</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
 
         <section class="section testimonials" id="depoimentos">
             <div class="container">
@@ -206,11 +265,14 @@
 
     <footer class="footer">
         <div class="container footer__content">
-            <p class="footer__signature">© 2026 J-CORE - Desenvolvido por João Ribeiro
+            <p class="footer__signature">© <span id="year"></span> J-CORE - Desenvolvido por João Ribeiro</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <a href="https://wa.me/5548991077261" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
 </body>
 
 </html>

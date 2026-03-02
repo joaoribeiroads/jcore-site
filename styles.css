@@ -226,12 +226,178 @@ img {
   justify-content: center;
 }
 
+.btn-cta-principal {
+    /* Gradiente amarelo para chamar atenção */
+    background: linear-gradient(45deg, #ffcc00, #ff9900) !important; 
+    
+    /* Texto em preto para leitura clara sobre o amarelo */
+    color: #000000 !important; 
+    
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    border-radius: 50px;
+    
+    /* Sombra suave na cor do botão */
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3); 
+    
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cta-principal:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.5);
+    filter: brightness(1.1);
+}
+
+@keyframes pulse-yellow {
+  0% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 204, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 204, 0, 0); }
+}
+
+.btn-cta-principal {
+  animation: pulse-yellow 2s infinite;
+}
+
+.card--featured {
+    transform: scale(1.05); /* Deixa o card levemente maior */
+    border-color: #ffcc00 !important; /* Usa a cor do seu botão principal */
+    position: relative;
+    z-index: 10;
+}
+
+/* Adiciona uma etiqueta de "Mais Vendido" */
+.card--featured::before {
+    content: "MAIS PROCURADO";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffcc00;
+    color: #000;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    border-radius: 20px;
+}
+
+.card-features-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Estilo das listas de benefícios */
+.card-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.card-features-list li {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+}
+
+/* Botões internos dos cards */
+.btn-card {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--accent);
+    color: var(--text);
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-card:hover {
+    background: var(--accent);
+}
+
+/* DESTAQUE: Plano central (Landing Page) */
+.card--featured {
+    border-color: #ffcc00 !important; /* Amarelo */
+    transform: scale(1.05);
+    background: radial-gradient(circle at top left, rgba(255, 204, 0, 0.1), rgba(15, 23, 42, 0.95)) !important;
+    z-index: 5;
+}
+
+.btn-card--featured {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+}
+
+.btn-card--featured:hover {
+    background: #ffd633;
+    transform: translateY(-2px);
+}
+
+/* Ajuste para telas menores não ficarem apertadas */
+@media (max-width: 900px) {
+    .card--featured {
+        transform: scale(1);
+        margin: 10px 0;
+    }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card-features-list li {
+    margin-bottom: 8px;
+}
+
+section {
+    padding: 80px 10% !important; 
+}
+
+
+.portfolio-item {
+    margin-bottom: 60px; 
+}
+
 .hero__badges {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   font-size: 0.8rem;
   color: var(--text-muted);
+}
+
+
+.portfolio-content a {
+    display: inline-block !important;
+    margin-top: 15px !important;
+    padding: 10px 25px !important;
+    background-color: #2563eb !important; 
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    font-weight: bold !important;
+    transition: 0.3s !important;
+    text-align: center !important;
+}
+
+.portfolio-content a:hover {
+    background-color: #1d4ed8 !important;
+    transform: scale(1.05);
 }
 
 .hero__badges span {
@@ -566,4 +732,129 @@ img {
   .grid--3 {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+.portfolio-item { 
+    margin-bottom: 40px; 
+} 
+.footer { 
+    margin-top: 60px; 
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+
+.card--featured:hover {
+    transform: translateY(-10px) scale(1.07); 
+}
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.portfolio-item img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+    display: block;
+    width: 100%;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+.portfolio-content {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-content {
+    transform: translateY(-5px);
+}
+
+.portfolio-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.portfolio-content a:hover {
+    background-color: #3b82f6;
+}
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float img {
+        width: 30px;
+        height: 30px;
+    }
+}
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.portfolio-item img {
+    transition: transform 0.5s ease, filter 0.5s ease;
+    display: block;
+    width: 100%;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+.portfolio-content {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-content {
+    transform: translateY(-5px);
 }
