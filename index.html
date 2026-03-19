@@ -2,34 +2,54 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>J-CORE | Criação de Sites Profissionais</title>
-    <meta name="description"
-        content="J-CORE - Landing page para vender serviços de criação de sites profissionais, landing pages e lojas virtuais." />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-CORE | Digital Experiences</title>
+    <meta name="description" content="Criação de sites de alto impacto, landing pages e e-commerces que convertem.">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon (SVG baseada na sua logo) -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='25' cy='45' r='12' fill='%232563eb'/%3E%3Crect x='45' cy='20' width='20' height='60' rx='10' transform='rotate(25 55 50)' fill='%232563eb'/%3E%3C/svg%3E">
+
+    <!-- Libraries -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide-static@0.321.0/lib/lucide.min.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container header__content">
-            <div class="logo">
-                <span class="logo__mark"></span>
-                <span class="logo__text">J-<span>CORE</span></span>
-            </div>
-            <nav class="nav">
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre mim</a>
-                <a href="#servicos">Planos de sites</a>
-                <a href="#portfolio">Portfólio</a>
-                <a href="#depoimentos">Depoimentos</a>
-                <a href="#contato" class="nav__cta">Contato</a>
+    <!-- Background Elements -->
+    <div class="canvas-container">
+        <div class="blob-1"></div>
+        <div class="blob-2"></div>
+        <div class="blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <div class="logo-icon"></div>
+                <span>J-<span class="accent">CORE</span></span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#sobre" class="nav-link">Expertise</a>
+                <a href="#servicos" class="nav-link">Soluções</a>
+                <a href="#portfolio" class="nav-link">Cases</a>
+                <a href="#contato" class="btn btn-nav">Contato</a>
             </nav>
-            <button class="menu-toggle" aria-label="Abrir menu">
+
+            <button class="mobile-toggle" aria-label="Menu">
                 <span></span>
                 <span></span>
             </button>
@@ -37,242 +57,298 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero" id="inicio">
-            <div class="container hero__content">
-                <div class="hero__text">
-                    <h1>Eu crio sites profissionais que vendem por você.</h1>
-                    <p>
-                        Transformo a sua ideia em um site moderno, rápido e preparado para atrair
-                        clientes todos os dias, do jeito que o seu negócio precisa.
-                    </p>
-                    <div class="hero__actions">
-                        <a href="#contato" class="btn-cta-principal">Quero um orçamento</a>
-                        <a href="#servicos" class="btn btn--ghost">Ver planos de sites</a>
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <div class="badge-premium">Design de Elite</div>
+                    <h1>Sites que <span class="gradient-text">dominam</span> o mercado.</h1>
+                    <p>Não criamos apenas sites. Construímos máquinas de vendas digitais com design futurista e
+                        performance extrema para o seu negócio.</p>
+
+                    <div class="hero-btns">
+                        <a href="#contato" class="btn btn-primary">Iniciar Projeto</a>
+                        <a href="#portfolio" class="btn btn-outline">Ver Portfólio</a>
                     </div>
-                    <div class="hero__badges">
-                        <span>✓ Site profissional e responsivo</span>
-                        <span>✓ Focado em atrair clientes</span>
-                        <span>✓ Suporte para publicar seu site</span>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">200+</span>
+                            <span class="stat-label">Clientes</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-num">10+</span>
+                            <span class="stat-label">Anos de Experiência</span>
+                        </div>
                     </div>
                 </div>
-                <div class="hero__card">
-                    <div class="hero__card-header">
-                        <span class="status-dot"></span>
-                        <span class="status-text">Seu novo site em desenvolvimento</span>
-                    </div>
-                    <div class="hero__card-body">
-                        <p class="hero__card-title">Tenha um site pronto para vender em poucos dias.</p>
-                        <ul class="hero__card-list">
-                            <li>Layout pensado para conversão e vendas</li>
-                            <li>Integração com WhatsApp, redes sociais e mapas</li>
-                            <li>Configuração de domínio e hospedagem (se precisar)</li>
-                        </ul>
+
+                <div class="hero-visual">
+                    <div class="visual-card">
+                        <div class="card-glass">
+                            <div class="card-header">
+                                <div class="dots"><span></span><span></span><span></span></div>
+                                <div class="url">j-core.digital</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="skeleton title"></div>
+                                <div class="skeleton text"></div>
+                                <div class="skeleton text short"></div>
+                                <div class="skeleton btn"></div>
+                            </div>
+                        </div>
+                        <div class="floating-badge badge-1">🚀 Conversão +85%</div>
+                        <div class="floating-badge badge-2">⚡ Ultra Rápido</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section about" id="sobre">
-            <div class="container section__content section__content--two-cols">
-                <div>
-                    <h2>Sobre o meu trabalho</h2>
-                    <p>
-                        Trabalho com criação de sites profissionais para pequenas e médias empresas,
-                        autônomos e prestadores de serviço que querem vender mais pela internet.
-                    </p>
-                    <p>
-                        Cada projeto é pensado para ser bonito, rápido, fácil de usar e com foco
-                        em trazer resultados reais para o seu negócio.
-                    </p>
-                </div>
-                <div class="about__highlights">
-                    <div class="about__item">
-                        <span class="about__number">10+</span>
-                        <span class="about__label">sites entregues</span>
-                    </div>
-                    <div class="about__item">
-                        <span class="about__number">200+</span>
-                        <span class="about__label">clientes atendidos</span>
-                    </div>
-                    <div class="about__item">
-                        <span class="about__number">30</span>
-                        <span class="about__label">dias de suporte pós‑lançamento</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section services" id="servicos">
+        <!-- Expertise Section -->
+        <section class="expertise" id="sobre">
             <div class="container">
-                <header class="section__header">
-                    <h2>Criação de sites</h2>
-                    <p>Escolha o tipo de site ideal para o seu negócio.</p>
-                </header>
-                <div class="grid grid--3">
-                    <article class="card">
-                        <h3>Site institucional profissional</h3>
-                        <ul class="card-features-list">
-                            <li>✅ Site completo e moderno</li>
-                            <li>✅ Focado em autoridade</li>
-                            <li>✅ Pronto para o Google</li>
-                            <li>✅ Painel administrativo</li>
-                        </ul>
-                        <a href="#contato" class="btn-card">Escolher este</a>
-                    </article>
+                <div class="section-header">
+                    <span class="sub">Por que a J-CORE?</span>
+                    <h2>Excelência em cada pixel.</h2>
+                </div>
 
-                    <article class="card card--featured">
-                        <h3>Landing pages que convertem</h3>
-                        <ul class="card-features-list">
-                            <li>🚀 Design focado em vendas</li>
-                            <li>🚀 Integração com WhatsApp</li>
-                            <li>🚀 Pixel e Google Ads</li>
-                            <li>🚀 Carregamento ultra-rápido</li>
-                        </ul>
-                        <a href="#contato" class="btn-card btn-card--featured">O mais pedido</a>
-                    </article>
-
-                    <article class="card">
-                        <h3>Loja virtual e catálogos</h3>
-                        <ul class="card-features-list">
-                            <li>🛒 Cadastro de produtos</li>
-                            <li>🛒 Categorias organizadas</li>
-                            <li>🛒 Pedidos via WhatsApp</li>
-                            <li>🛒 Galeria de fotos e preços</li>
-                        </ul>
-                        <a href="#contato" class="btn-card">Escolher este</a>
-                    </article>
+                <div class="expertise-grid">
+                    <div class="exp-card">
+                        <i data-lucide="zap"></i>
+                        <h3>Alta Performance</h3>
+                        <p>Sites otimizados para carregar em milissegundos, garantindo a melhor experiência.</p>
+                    </div>
+                    <div class="exp-card">
+                        <i data-lucide="smartphone"></i>
+                        <h3>Mobile First</h3>
+                        <p>Experiência perfeita em smartphones, onde a maioria dos seus clientes está.</p>
+                    </div>
+                    <div class="exp-card">
+                        <i data-lucide="shield-check"></i>
+                        <h3>SEO & Conversão</h3>
+                        <p>Estratégias integradas para você aparecer no Google e vender mais.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section portfolio" id="portfolio">
+        <!-- Solutions Section -->
+        <section class="solutions" id="servicos">
             <div class="container">
-                <header class="section__header">
-                    <h2>Meu Portfólio</h2>
-                    <p>Alguns projetos recentes que desenvolvi.</p>
-                </header>
+                <div class="section-header center">
+                    <span class="sub">Nossas Soluções</span>
+                    <h2>O que podemos construir para você.</h2>
+                </div>
+
+                <div class="solutions-grid">
+                    <div class="sol-card featured">
+                        <div class="sol-tag">Mais Procurado</div>
+                        <h3>Landing Pages</h3>
+                        <p>Focadas em converter visitantes em clientes reais de forma direta e eficaz.</p>
+                        <ul class="sol-list">
+                            <li>Design de Conversão</li>
+                            <li>Integração WhatsApp</li>
+                            <li>Rastreamento de Leads</li>
+                        </ul>
+                        <a href="#contato" class="btn btn-full">Solicitar LP</a>
+                    </div>
+
+                    <div class="sol-card">
+                        <h3>Sites Institucionais</h3>
+                        <p>Autoridade digital completa para empresas que buscam profissionalismo.</p>
+                        <ul class="sol-list">
+                            <li>Multilíngue</li>
+                            <li>Gestão de Conteúdo</li>
+                            <li>Blog Integrado</li>
+                        </ul>
+                        <a href="#contato" class="btn btn-full">Solicitar Site</a>
+                    </div>
+
+                    <div class="sol-card">
+                        <h3>E-commerce & Catálogos</h3>
+                        <p>Venda seus produtos online com uma loja moderna e fácil de gerenciar.</p>
+                        <ul class="sol-list">
+                            <li>Pagamentos Online</li>
+                            <li>Gestão de Estoque</li>
+                            <li>Cálculo de Frete</li>
+                        </ul>
+                        <a href="#contato" class="btn btn-full">Solicitar Loja</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <span class="sub">Portfólio de Elite</span>
+                    <h2>Projetos que entregam resultados.</h2>
+                </div>
 
                 <div class="portfolio-grid">
-                    <article class="portfolio-item">
-                        <img src="image.png" alt="Sabor do Prédio - Pedido Rápido" />
-                        <div class="portfolio-content">
-                            <h3>Sabor do Prédio - Pedido Rápido</h3>
-                            <p>Site ultra-rápido que não precisa recarregar a página, facilitando o pedido do cliente e
-                                aumentando as vendas.</p>
-                            <a href="https://foodsiteee.netlify.app/" target="_blank" rel="noopener noreferrer">Ver
-                                projeto</a>
+                    <article class="project-card">
+                        <div class="project-img">
+                            <img src="image.png" alt="LilModas" loading="lazy" fetchpriority="high">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-cat">Moda & E-commerce</span>
+                            <h3>LilModas</h3>
+                            <p>Interface minimalista projetada para destacar coleções com fluidez.</p>
+                            <a href="https://lilmodas.netlify.app/" target="_blank" class="project-link">Explorar Case
+                                <i data-lucide="external-link"></i></a>
                         </div>
                     </article>
 
-                    <article class="portfolio-item">
-                        <img src="image (1).png" alt="Projeto 2 - Nome do projeto" />
-                        <div class="portfolio-content">
-                            <h3>LP para Dra. Geovana</h3>
-                            <p>Landing page desenvolvida para a Psicóloga Geovana, unindo design acolhedor e copywriting
-                                focado em conversão. O projeto prioriza a facilidade de agendamento e a construção de
-                                autoridade através de uma interface limpa e responsiva.</p>
-                            <a href="https://psicologage.netlify.app/" target="_blank" rel="noopener noreferrer">Ver
-                                projeto</a>
+                    <article class="project-card">
+                        <div class="project-img">
+                            <img src="image (15).png" alt="GHASTBRAZIL" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-cat">Moda & E-commerce</span>
+                            <h3>GHASTBRAZIL</h3>
+                            <p>Estética essencial: onde cada detalhe importa.</p>
+                            <a href="https://ghastbrazil.netlify.app/" target="_blank" class="project-link">Explorar
+                                Case <i data-lucide="external-link"></i></a>
                         </div>
                     </article>
 
-                    <article class="portfolio-item">
-                        <img src="image (2).png" alt="e-pulse" />
-                        <div class="portfolio-content">
-                            <h3>e-pulse</h3>
-                            <p>Criação de um catálogo otimizado para conversão e com integração
-                                direta para pedidos via WhatsApp. Desenvolvido para oferecer carregamento rápido e
-                                navegação fluida em qualquer dispositivo.</p>
-                            <a href="https://e-pulse.netlify.app/" target="_blank" rel="noopener noreferrer">Ver
-                                projeto</a>
+                    <article class="project-card">
+                        <div class="project-img">
+                            <img src="image (2).png" alt="Mobilidade Elétrica" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <span class="project-cat">Automotivo & Tech</span>
+                            <h3>Mobilidade Elétrica</h3>
+                            <p>Catálogo otimizado com integração direta para pedidos rápidos.</p>
+                            <a href="https://mobilidadeeletrica.netlify.app/" target="_blank"
+                                class="project-link">Explorar Case <i data-lucide="external-link"></i></a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-
-        <section class="section testimonials" id="depoimentos">
+        <!-- Testimonials -->
+        <section class="testimonials">
             <div class="container">
-                <header class="section__header">
-                    <h2>Resultados de quem já tem site</h2>
-                    <p>Veja o que alguns clientes dizem sobre os sites que criei.</p>
-                </header>
-                <div class="grid grid--3">
-                    <article class="testimonial">
-                        <p>
-                            “Meu site ficou profissional em pouco tempo e já comecei a receber mais pedidos pelo
-                            WhatsApp.”
-                        </p>
-                        <span class="testimonial__name">Cliente Satisfeito</span>
-                        <span class="testimonial__role">Dono de pequena empresa</span>
-                    </article>
-                    <article class="testimonial">
-                        <p>
-                            “Processo simples, sem dor de cabeça, e o resultado foi um site leve, bonito e fácil de
-                            atualizar.”
-                        </p>
-                        <span class="testimonial__name">Maria Silva</span>
-                        <span class="testimonial__role">Consultora</span>
-                    </article>
-                    <article class="testimonial">
-                        <p>
-                            “Hoje meus clientes encontram minha empresa no Google e conseguem ver tudo direto pelo
-                            celular.”
-                        </p>
-                        <span class="testimonial__name">João Pereira</span>
-                        <span class="testimonial__role">Autônomo</span>
-                    </article>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="quote">“</div>
+                        <p>O site da J-CORE transformou nossa presença digital. As vendas aumentaram 40% em 2 meses.</p>
+                        <div class="user">
+                            <div class="user-info">
+                                <strong>João Pereira</strong>
+                                <span>CEO Tech Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote">“</div>
+                        <p>Design impecável e suporte que realmente resolve. Recomendo para qualquer empresa.</p>
+                        <div class="user">
+                            <div class="user-info">
+                                <strong>Maria Silva</strong>
+                                <span>Diretora de Marketing</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section contact" id="contato">
-            <div class="container section__content section__content--two-cols">
-                <div>
-                    <h2>Peça um orçamento de site</h2>
-                    <p>
-                        Preencha o formulário ao lado com algumas informações do seu negócio e retornarei
-                        o contato com uma proposta personalizada para o seu site.
-                    </p>
-                    <ul class="contact__info">
-                        <li><strong>WhatsApp:</strong> +55 48 99107-7261</li>
-                        <li><strong>Endereço:</strong> Criciúma, Santa Catarina</li>
-                    </ul>
+        <!-- Contact Section -->
+        <section class="contact" id="contato">
+            <div class="container contact-grid">
+                <div class="contact-text">
+                    <h2>Vamos criar algo <span class="gradient-text">FODA</span>?</h2>
+                    <p>Entre em contato e receba uma proposta personalizada para o seu negócio.</p>
+
+                    <div class="contact-items">
+                        <a href="https://wa.me/5548991077261" target="_blank" class="contact-item">
+                            <div class="contact-icon-box">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                                    alt="WhatsApp">
+                            </div>
+                            <div>
+                                <span>WhatsApp</span>
+                                <strong>+55 48 99107-7261</strong>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-icon-box">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div>
+                                <span>Localização</span>
+                                <strong>Criciúma, SC</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Iframe -->
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56123.4567890!2d-49.366!3d-28.677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521823000000001%3A0x0!2sCrici%C3%BAma%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
-                <form class="contact__form" id="contact-form">
-                    <div class="form__group">
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
-                    </div>
-                    <div class="form__group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
-                    </div>
-                    <div class="form__group">
-                        <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Como podemos ajudar?"
-                            required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full">Enviar mensagem</button>
-                    <p class="form__feedback" id="form-feedback" hidden>
-                        Obrigado! Sua mensagem foi enviada.
-                    </p>
-                </form>
+
+                <div class="contact-form-box">
+                    <form id="contact-form">
+                        <div class="input-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Enviar Proposta <i
+                                data-lucide="send"></i></button>
+                        <p id="form-feedback" class="feedback" hidden></p>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container footer__content">
-            <p class="footer__signature">© <span id="year"></span> J-CORE - Desenvolvido por João Ribeiro</p>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <div class="logo-icon"></div>
+                <span>J-<span>CORE</span></span>
+            </div>
+            <p>© <span id="year"></span> J-CORE. All Rights Reserved. Crafted by João Ribeiro</p>
+            <div class="social-links">
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="linkedin"></i></a>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- WhatsApp Float -->
     <a href="https://wa.me/5548991077261" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="32"
+            height="32">
     </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
